@@ -8,11 +8,11 @@
 </head>
 <body class="bg-[#C0C0C0] p-5">
     <div class="max-w-2xl mx-auto bg-[#F8F8F8] p-6 rounded-2xl shadow-xl border border-gray-700">
-        <h1 class="text-2xl font-bold text-indigo-400 mb-4">Discord Timestamp Generator</h1>
+        <h1 class="text-2xl font-bold text-Black-400 mb-4">Discord Timestamp Generator</h1>
         
         <label class="block text-sm font-medium mb-2">Click on Calendar Icon, Select Date & Time on and copy Result through Copy Button</label>
         <input type="datetime-local" id="dateInput" 
-               class="w-full p-3 rounded bg-[#FFFFFF] mb-6 focus:ring-2 focus:ring-indigo-500 outline-none">
+               class="w-full p-3 rounded bg-[#FFFFFF] mb-6 focus:ring-2 focus:ring-Black-500 outline-none">
 
         <div id="results" class="space-y-3">
             <!-- JavaScript will inject rows here -->
@@ -52,11 +52,11 @@
                 
                 row.innerHTML = `
                     <div class="flex-1">
-                        <span class="text-xs text-gray-400 uppercase font-bold">${f.name}</span>
-                        <div class="text-indigo-300 font-mono text-sm truncate">${code}</div>
+                        <span class="text-xs text-Black-400 uppercase font-bold">${f.name}</span>
+                        <div class="text-Black-300 font-mono text-sm truncate">${code}</div>
                     </div>
                     <button onclick="copyText('${code}', this)" 
-                            class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded text-sm font-bold transition duration-200">
+                            class="w-full sm:w-auto bg-Black-600 hover:bg-Black-500 px-4 py-2 rounded text-sm font-bold transition duration-200">
                         Copy
                     </button>
                 `;
@@ -68,11 +68,11 @@
             navigator.clipboard.writeText(text);
             const originalText = btn.innerText;
             btn.innerText = "Copied!";
-            btn.classList.replace('bg-indigo-600', 'bg-green-600');
+            btn.classList.replace('bg-white-600', 'bg-green-600');
             
             setTimeout(() => {
                 btn.innerText = originalText;
-                btn.classList.replace('bg-green-600', 'bg-indigo-600');
+                btn.classList.replace('bg-green-600', 'bg-white-600');
             }, 1500);
         }
 
